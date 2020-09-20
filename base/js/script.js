@@ -1,16 +1,7 @@
-$(function() {
+$(function(){
 
-  $('.blue-box').animate({
-    'margin-left': '200px',
-     opacity:'0',
-     height:'50px',
-    'width':'50px',
-     marginTop:'25px'
-  }, 1500)
+  $('.red-box').fadeTo(1000, 0.3);
+  $('.green-box').delay(1000).fadeTo(1000, 0.5);
+  $('.blue-box').delay(2000).fadeTo(1000, 0.8).fadeOut().delay(1000).fadeIn();
 
-  $('p').animate({
-    fontSize: '20px',
-    'color': '#44444'
-  }, 3000)
-  
-});
+})

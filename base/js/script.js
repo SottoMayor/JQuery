@@ -4,6 +4,10 @@ $(function() {
   // Uncomment this line to fade out the red box on page load
 
   for(var i=0; i < 10; i++){
+
+    // FadeIn and FadeOut changes DISPLAY
+    // FadeTo changes OPACITY
+
     $(".red-box").fadeOut(2000);
     $(".red-box").fadeIn(4000);
     $('.green-box').fadeTo(2000, 0.5);

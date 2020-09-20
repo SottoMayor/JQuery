@@ -1,16 +1,23 @@
 $(function(){
-
-  //$('p').css('background-color','yellow');
-  $('#list').css('background-color','yellow');
-  $('input[type="text"]').css('background-color','teal')
-  $('h2, p, input[type="email"]').css('background-color','chartreuse')
-  //$('li:last').css('background-color','lightblue')
-  //$('li:even').css('background-color','lightblue')
-  $('li:odd').css('background-color','lightblue')
-
-  //$('input[type="text"]').css('background-color','teal') too!! $(input:radio), $(input:radio)....
-  $('input:text').css('background-color','lightblue')
-  $('input:selected').css('background-color','yellow');
   
+  //items e subitems
+  ///$('#list').find('li').css('background-color','yellow');
+
+  //subitems
+  ///$("#list").children('li').css('background-color','blue');
+
+  //items parents
+  //$("#list").parents('div').css('background-color','red');
+  $("#list").parents('body').css('background-color','red');
+
+
+  //items parent
+  ///$("#list").parent('div').css('background-color','yellow');
+
+  ///$("#list").siblings().css('background-color','yellow');
+  ////$("#list").siblings(':header').css('background-color','yellow');
+  //$("#list").prev().css('background-color','yellow');
+  //$("#list").next().css('background-color','yellow');
+  $("#list").prev().next().css('background-color','yellow');
 
 });

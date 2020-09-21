@@ -1,23 +1,16 @@
 $(function(){
   
-  $('ul ul:first').append("<li>I'm gonna be the last sub-item!");
+ $('li').replaceWith('<li>Replaced</li>')
 
-  $("<li>I'm the last sub-item </li>").appendTo($('ul ul:first'))
+ $('li').replaceWith(function() {
+   return '<li> Replaced with function </li>'
+ })
 
-  $('ul ul:first').prepend("<li>I'm gonna be the first sub-item!");
-  
-  $("<li>I'm the first sub-item </li>").prependTo('ul ul:first');
+ var firstListItem = $("li:first");
+ $('p:first').replaceWith(firstListItem);
 
-  $("<h4>David Sotto Mayor</h4>").prependTo($('#content'))
+ $('.blue-box, .red-box').replaceWith($('<div class="green-box">Others Greens!</div>'));
 
-  $('.red-box').after('<div class="red-box">Another Red!</div>');
-
-  $('.blue-box').before(function(){
-    return '<div class="red-box">Blue and Red Friends!</div>';
-  });
-
-  $('.blue-box').before($('.red-box'));
-
-  $('p').after($('#list'));
+ $('<div class="green-box">Others Greens!</div>').replaceAll('.blue-box, .red-box')
 
 });

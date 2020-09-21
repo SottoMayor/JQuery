@@ -1,23 +1,23 @@
 $(function(){
   
-  //items e subitems
-  ///$('#list').find('li').css('background-color','yellow');
+  $('ul ul:first').append("<li>I'm gonna be the last sub-item!");
 
-  //subitems
-  ///$("#list").children('li').css('background-color','blue');
+  $("<li>I'm the last sub-item </li>").appendTo($('ul ul:first'))
 
-  //items parents
-  //$("#list").parents('div').css('background-color','red');
-  $("#list").parents('body').css('background-color','red');
+  $('ul ul:first').prepend("<li>I'm gonna be the first sub-item!");
+  
+  $("<li>I'm the first sub-item </li>").prependTo('ul ul:first');
 
+  $("<h4>David Sotto Mayor</h4>").prependTo($('#content'))
 
-  //items parent
-  ///$("#list").parent('div').css('background-color','yellow');
+  $('.red-box').after('<div class="red-box">Another Red!</div>');
 
-  ///$("#list").siblings().css('background-color','yellow');
-  ////$("#list").siblings(':header').css('background-color','yellow');
-  //$("#list").prev().css('background-color','yellow');
-  //$("#list").next().css('background-color','yellow');
-  $("#list").prev().next().css('background-color','yellow');
+  $('.blue-box').before(function(){
+    return '<div class="red-box">Blue and Red Friends!</div>';
+  });
+
+  $('.blue-box').before($('.red-box'));
+
+  $('p').after($('#list'));
 
 });

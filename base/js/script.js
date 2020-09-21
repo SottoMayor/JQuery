@@ -1,21 +1,22 @@
 $(function(){
   
-  //attr(), prop(), val();
+  var image = $('.gallery').find('img').first();
+  var images = [
+    "images/laptop-mobile_small.jpg",
+    "images/laptop-on-table_small.jpg",
+    "images/people-office-group-team_small.jpg"
+  ]
 
-  var link = $('#special-link');
-  console.log(link.attr("href"));
+  var i =0;
+  setInterval(function(){
+    i = (i + 1) % images.length; //0,1,2,0,1,2....
+    image.fadeOut(function(){
+      $(this).attr('src', images[i]);
+      $(this).fadeIn();
+    });
 
-  link.attr('href','https://youtube.com').attr('target','_blank')
+    console.log(image.attr('src'));
 
-  var checkbox = $('input:checkbox');
-  console.log(checkbox.prop('checked'))
-  console.log(checkbox.attr('checked'))
-
-  var text = $('input:text')
-
-  console.log(text.val());
-
-  var range = $('input[type=range]');
-  console.log(range.val());
+  }, 2000)
 
 });

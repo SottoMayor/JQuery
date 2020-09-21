@@ -1,16 +1,14 @@
 $(function(){
   
- $('li').replaceWith('<li>Replaced</li>')
+  ///$('li').remove();
+  $('form').children().not('input:text, textarea, br').remove();
 
- $('li').replaceWith(function() {
-   return '<li> Replaced with function </li>'
- })
+  $('#content').prepend($('li').detach());
 
- var firstListItem = $("li:first");
- $('p:first').replaceWith(firstListItem);
+  $('p:first').empty();
 
- $('.blue-box, .red-box').replaceWith($('<div class="green-box">Others Greens!</div>'));
+  $('.red-box, .green-box, .blue-box').empty();
 
- $('<div class="green-box">Others Greens!</div>').replaceAll('.blue-box, .red-box')
+
 
 });

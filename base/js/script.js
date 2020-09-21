@@ -1,14 +1,21 @@
 $(function(){
   
-  ///$('li').remove();
-  $('form').children().not('input:text, textarea, br').remove();
+  //attr(), prop(), val();
 
-  $('#content').prepend($('li').detach());
+  var link = $('#special-link');
+  console.log(link.attr("href"));
 
-  $('p:first').empty();
+  link.attr('href','https://youtube.com').attr('target','_blank')
 
-  $('.red-box, .green-box, .blue-box').empty();
+  var checkbox = $('input:checkbox');
+  console.log(checkbox.prop('checked'))
+  console.log(checkbox.attr('checked'))
 
+  var text = $('input:text')
 
+  console.log(text.val());
+
+  var range = $('input[type=range]');
+  console.log(range.val());
 
 });

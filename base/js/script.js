@@ -1,19 +1,13 @@
 $(function(){
 
-  
-  $('.gallery').hide();
+  $('#button').click(function(event){
+    console.log(event);
+    alert('The button was clicked!');
+  })
 
+  $('.red-box').click(function(){
+    $(this).fadeTo(1500, 0.5);
+  })
 
-  // text(), html()
-
-  var fistpar = $('p:first');
-
-  console.log(fistpar.text())
-  console.log(fistpar.html())
-
-  //fistpar.text('<strong>HELLO</strong> world!');
-  //fistpar.html('<strong>HELLO</strong> world!');
-
-  fistpar.html( fistpar.html() + ' It was just appended.' )
 
 });

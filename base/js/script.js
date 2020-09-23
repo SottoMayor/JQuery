@@ -1,13 +1,14 @@
 $(function(){
 
-  $('#button').click(function(event){
-    console.log(event);
-    alert('The button was clicked!');
+  $('#hover').hover(function(){
+    alert('button was hovered!')
   })
 
-  $('.red-box').click(function(){
-    $(this).fadeTo(1500, 0.5);
-  })
+  $('.green-box').hover(function(){
+    $(this).text('I was Hovered!')
+  }, function(){
+    $(this).text('Hover-me!')
+  });
 
 
 });

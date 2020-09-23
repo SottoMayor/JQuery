@@ -1,21 +1,19 @@
 $(function(){
 
-  var gallery = $('.gallery');
-  var images = [
-    'images/laptop-mobile_small.jpg',
-    'images/laptop-on-table_small.jpg',
-    'images/people-office-group-team_small.jpg'
-  ]
+  
+  $('.gallery').hide();
 
-  gallery.data('availableImages',images);
-  console.log(gallery.data('availableImages'))
-  gallery.data('name','Nominhho');
-  console.log(gallery.data());
-  gallery.removeData('name');
-  console.log(gallery.data('name'));
+
+  // text(), html()
 
   var fistpar = $('p:first');
 
-  console.log(fistpar.data('mydata'));
+  console.log(fistpar.text())
+  console.log(fistpar.html())
+
+  //fistpar.text('<strong>HELLO</strong> world!');
+  //fistpar.html('<strong>HELLO</strong> world!');
+
+  fistpar.html( fistpar.html() + ' It was just appended.' )
 
 });

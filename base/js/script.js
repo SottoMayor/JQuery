@@ -2,22 +2,28 @@ $(function(){
 
  // .on('click', function() {...})
 
- $('html').on('click keydown', function(){
-  console.log('Mouse was clicked or key was pressed!')
- });
+ function logEvent(){
+  console.log('Mouse was clicked or key was pressed!');
+ }
 
- var images = [
-   'images/laptop-mobile_small.jpg',
-   'images/laptop-on-table_small.jpg',
-   'images/people-office-group-team_small.jpg'
- ]
+ $('html').on('click keydown', logEvent());
 
- var i = 0;
- $('.gallery').find('img').on('click', function(){
-   i = (i + 1) % images.length
-   $(this).stop().fadeOut(function(){
-     $(this).attr('src',images[i]).fadeIn();
-   })
- })
+  var images = [
+    'images/laptop-mobile_small.jpg',
+    'images/laptop-on-table_small.jpg',
+    'images/people-office-group-team_small.jpg'
+  ]
+  var i = 0;
+  var gallery = $('.gallery').find('img');
+  gallery.on('click', execute);
+
+  function execute (){
+    i = (i + 1) % images.length
+    gallery.fadeOut(function(){
+      gallery.attr('src',images[i]).fadeIn();
+    })
+  }
+ 
+
 
 });

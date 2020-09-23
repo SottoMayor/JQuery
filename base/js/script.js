@@ -1,30 +1,23 @@
 $(function(){
 
-  $('#hover').hover(function(){
-    alert('button was hovered!')
-  })
+ // .on('click', function() {...})
 
-  //hover(handlerIn, handlerOut)
-  $('.green-box').hover(function(){
-    $(this).text('I was Hovered!')
-  }, function(){
-    $(this).text('Hover-me!')
-  });
+ $('html').on('click keydown', function(){
+  console.log('Mouse was clicked or key was pressed!')
+ });
 
-  var blueBlox = $(".blue-box");
+ var images = [
+   'images/laptop-mobile_small.jpg',
+   'images/laptop-on-table_small.jpg',
+   'images/people-office-group-team_small.jpg'
+ ]
 
-  blueBlox.mouseenter(function(){
-    $(this).stop().fadeTo(1000, 0.5);
-  });
-  blueBlox.mouseleave(function(){
-    $(this).stop().fadeTo(1000, 1);
-  })
-
-
-  blueBlox.hover(function(){
-    $(this).stop().fadeTo(1000, 0.5);
-  }, function(){
-    $(this).stop().fadeTo(1000, 1);
-  });
+ var i = 0;
+ $('.gallery').find('img').on('click', function(){
+   i = (i + 1) % images.length
+   $(this).stop().fadeOut(function(){
+     $(this).attr('src',images[i]).fadeIn();
+   })
+ })
 
 });

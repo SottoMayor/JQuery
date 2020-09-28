@@ -1,32 +1,22 @@
 $(function(){
 
-  var galleryItems = $('.gallery').find('img');
-  galleryItems.css({
-    width : '33%',
-    opacity : 0.7
-  });
+  $('html').keydown(function(event){
+    console.log(event.which);
+  })  
 
-  galleryItems.hover(function(){
-    $(this).stop().fadeTo(500, 1);
-  }, function(){
-    $(this).stop().fadeTo(500, 0.7);
+  var move_right = 39;
+  var move_left = 37;
+
+  $('html').keydown(function(event){
+    if (event.which == move_right){
+      $('.blue-box').stop().animate({
+        marginLeft : '+=30px'
+      }, 500)
+    }else if (event.which == move_left){
+      $('.blue-box').stop().animate({
+        marginLeft: '-=30px'
+      }, 500)
+    }
   })
-
-  galleryItems.click(function(){
-    var source = $(this).attr('src');
-    var image = $('<img>').attr('src', source).css("width", "100%");
-    $('.lightbox').empty().append(image).fadeIn(1500); 
-
-    image.click(function(event){
-      event.stopPropagation();
-    })
-  })
-
-  $('.lightbox').click(function(){
-    $(this).fadeOut(500);
-  })
-
-
-  
 
 });

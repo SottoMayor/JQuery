@@ -1,24 +1,20 @@
 $(function(){
 
-  /*
-  $('p').click(function(){
-    $(this).slideUp();
-  });
+  $('#btn-submit').click({
+    user: 'David',
+    domain: 'domain.com'
+  }, function(event){
+    greetUser(event.data);
+    console.log(user)
 
-  $('#content').append('<p> This is a dinamically added paragraph! </p>');
-
-   */
-
-  // Delegated Events!
-
-  $('#content').on('click', 'p', function(){
-    $(this).slideUp();
-  });
-
-  $('#content').append('<p> This is a dinamically added paragraph! </p>');
-
-  $('body').on('click mouseleave', 'li', function(){
-    $(this).css('color', 'blue');
+    return false;
   })
+
+  function greetUser(userdata){
+    username = userdata.user || 'Anonymous';
+    domain = userdata.domain || 'exemple.com'
+
+    alert('Welcome ' + username + ' from ' + domain + '!')
+  }
 
 });

@@ -1,22 +1,24 @@
 $(function(){
 
-  $('html').keydown(function(event){
-    console.log(event.which);
-  })  
+  var inputFields = $('input:text, input[type="email"], input:password, textarea');
+  
+  inputFields.focus(function(){
+    $(this).css('box-shadow', '0 0 6px #aaa');
+  });
 
-  var move_right = 39;
-  var move_left = 37;
+  inputFields.blur(function(){
+    $(this).css('box-shadow', 'none');
+  })
 
-  $('html').keydown(function(event){
-    if (event.which == move_right){
-      $('.blue-box').stop().animate({
-        marginLeft : '+=30px'
-      }, 500)
-    }else if (event.which == move_left){
-      $('.blue-box').stop().animate({
-        marginLeft: '-=30px'
-      }, 500)
+  $('#name').blur(function(){
+    var name = $(this).val();
+    var name_len = name.length;
+    if(name_len < 3){
+      $(this).css('box-shadow', '0 0 6px red');
+    }else{
+      $(this).css('box-shadow', '0 0 6px green');
     }
   })
+
 
 });

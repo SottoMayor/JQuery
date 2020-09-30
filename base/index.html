@@ -68,27 +68,24 @@
 
     </ul>
 
-    <form action="">
+    <form action="" id="form">
 
-      <input type="text" id="name"><br>
-      <input type="email"><br>
-      <input type="password"><br>
-      <input type="range" min="1" max="10" value="7"><br>
-      <input type="checkbox" checked name="cb"><label for="cb">Check ME!</label><br>
-      <textarea name="" id="" cols="30" rows="10"></textarea><br>
-      <div id="write"></div>
-      <select name="" id="option">
-        <option value="pão de batata">pão de batata</option>
-        <option value="feijão">feijão</option>
-        <option value="estrogonofe">estrogonofe</option>
-        <option value="Cheetos">Cheetos</option>
-        <option value="Feijoada">Feijoada</option>
-      </select>
-      <input type="submit" value="On y va!">
-      <select name="" id=""><option value="AAA">
-        <option value="AAA"></option>
-        <option value="AAA"></option>
-      </option></select>
+      <input type="text" id="name" placeholder="Enter your name!"><br>
+      <span id="name-feedback"></span><br>
+
+      <input type="password" id="password" placeholder="Enter your password!" ><br>
+      <span id="password-feedback"></span><br>
+
+      <input type="range" id="amount" min="1" max="9" value="5"><br>
+
+      <textarea name="" id="message" cols="30" rows="10" ></textarea><br>
+      <span id="message-feedback"></span><br>
+
+      <input type="checkbox" id="checkbox" name="cb"><label for="cb" >Check Me!</label><br>
+      <span id="checkbox-feedback"></span><br>
+
+      <input type="submit" id="submit">
+
     </form>
 
   </div>

@@ -1,24 +1,26 @@
 $(function(){
 
-  var inputFields = $('input:text, input[type="email"], input:password, textarea');
-  
-  inputFields.focus(function(){
-    $(this).css('box-shadow', '0 0 6px #aaa');
-  });
 
-  inputFields.blur(function(){
-    $(this).css('box-shadow', 'none');
+
+  $('input[type="checkbox"]').change(function(){
+      var isChecked = $(this).is(':checked');
+
+      if(isChecked){
+          $(this).add('label[for="cb"]').css('box-shadow', '0 0 6px green');
+      }else{
+          $(this).add('label[for="cb"]').css('box-shadow', '0 0 6px red')
+
+      }
   })
 
-  $('#name').blur(function(){
-    var name = $(this).val();
-    var name_len = name.length;
-    if(name_len < 3){
-      $(this).css('box-shadow', '0 0 6px red');
-    }else{
-      $(this).css('box-shadow', '0 0 6px green');
-    }
+  /*$('#option').change(function(){
+      alert($(this).val() + ' is my option!')
   })
+  */
 
+  $('#option').change(function(){
+      myOption = $(this).find(':selected').text();
+      alert(myOption)
+  })
 
 });

@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     $('button').click(function(){
         
-        console.log($('div').scrollLeft());
+        console.log($('div').scrollTop());
     })
 
-    
+
 
 })

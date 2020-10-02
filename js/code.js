@@ -1,11 +1,21 @@
 $(document).ready(function(){
 
-    // innerHeight or innerWidth include padding!!
-    console.log($('div').innerHeight())
-    console.log($('div').innerWidth())
+    var box = $('.box');
 
-    // outerHeight or outerWidht include padding and border!
-    console.log($('div').outerHeight())
-    console.log($('div').outerWidth())
-    console.log($('div').outerWidth() - $('div').innerWidth())
+    //Position on the document left and top of the element!
+    console.log(box.offset());
+
+    //Position on the document left of the element!
+    console.log(box.offset().left);
+
+     //Position on the document top of the element!
+     console.log(box.offset().top);
+
+     //alert('top: '+ box.offset().top +' and left: '+box.offset().left)
+
+     // Position on the parent in relation of the element (if position:relative!)!
+     alert(box.position().top + ' and ' + box.position().left)
+
+
+
 })

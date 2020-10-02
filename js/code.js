@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-    //$('.first').next().css('background-color','red');
-    //$('.fourth').prev().css('background-color','green');
+    $('div').first().css('background-color', 'green');
+    $('div').last().css('background-color', 'green');
+    $('div').not('div:nth-of-type(3)').css('color', 'red');
 
-    //$('.first').nextAll().css('background-color','red');
-    $('.fourth').prevAll().css('background-color','green');
 })

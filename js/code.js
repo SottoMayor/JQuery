@@ -1,29 +1,7 @@
 $(document).ready(function(){
-    //$("#header").css('fontSize', '30px');
 
-    $('#header').css({
-        'fontSize': '30px',
-        'color': 'red',
-        'fontWeight': '800',
-        'textAlign': 'right'
-    });
+    $('.box-1').width('400px').css('background-color','blue');
+    $('.box-2').height('400px').css('background-color','gray');
+    $('.box-3').width('200px').height('200px').css('background-color','yellow')
 
-    $('.main-title').css({
-        fontSize: "17px"
-    });
-
-    $('#content').css({
-        'backgroundColor': 'lightgreen',
-        'color':' white',
-        width: '50%'
-    });
-
-    $('.post').css({
-        'backgroundColor':' gray',
-        'padding': '10px'
-    });
-    $('footer').css({
-        'text-align':'center',
-        'color': 'black'
-    })
-});
+})

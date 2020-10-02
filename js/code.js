@@ -1,6 +1,10 @@
 $(document).ready(function(){
-    $('#header').css('background-color', 'gray');
-    $('#content').css('background-color','lightgray');
-    // Danger! one ID is only valid for one element!
-    $('#post').css('background-color','white');
-})
+
+    $('[data-att=heading]').css('color', 'blue');
+
+    $('input:text').css('padding', '30px');
+    $('input[type=email]').css('font-size', '30px');
+    $('input:password').css('box-shadow', '0 0 18px gray');
+
+
+});

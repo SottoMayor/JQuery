@@ -30,7 +30,8 @@
     box-shadow: 0 0 8px 4px #06599d inset; }
 
  .header { 
-     text-align: center; }
+     text-align: center; 
+     background-color: cadetblue;}
   
   body {
     font-size: 16px;

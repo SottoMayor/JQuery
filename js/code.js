@@ -1,8 +1,6 @@
 $(document).ready(function(){
-    $('.header').css('background-color', 'gray').css('text-align', 'center');
-    $('.main-header').css('font-size', '90px');
-    $('.slogan').css('color','white');
-
-    $('.post').css('color', 'red');
-    $('.post h6').css('color', 'gray');
-});
+    $('#header').css('background-color', 'gray');
+    $('#content').css('background-color','lightgray');
+    // Danger! one ID is only valid for one element!
+    $('#post').css('background-color','white');
+})

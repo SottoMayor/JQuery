@@ -1,10 +1,9 @@
 $(document).ready(function(){
+    
+    $('.main-header').parent().css('background-color', 'orange');
 
-    $('[data-att=heading]').css('color', 'blue');
+    $('.post').parent().css('background-color', 'green');
 
-    $('input:text').css('padding', '30px');
-    $('input[type=email]').css('font-size', '30px');
-    $('input:password').css('box-shadow', '0 0 18px gray');
+    $('.child').parent().css('background-color','teal')
 
-
-});
+})

@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    $('header').css('font-size', '30px').css('text-align', 'center');
-    $('section').css('background-color', 'lightgray');
-    $('p').css('font-size', '13px');
-    $('h6').css('font-weight', '800');
-    $('article').css('color', 'blue');
+    $('.header').css('background-color', 'gray').css('text-align', 'center');
+    $('.main-header').css('font-size', '90px');
+    $('.slogan').css('color','white');
+
+    $('.post').css('color', 'red');
+    $('.post h6').css('color', 'gray');
 });

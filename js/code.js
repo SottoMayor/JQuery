@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
-    $('#content div:odd').css('background-color','blue');
-    $('#content div:even').css('background-color','red');
+    //$('.first').next().css('background-color','red');
+    //$('.fourth').prev().css('background-color','green');
 
-    $('thead').css('background-color','lightgray');
-    $('tbody tr:odd').css('background-color','orange');
-    $('tbody tr:even').css('background-color','chartreuse');
-
+    //$('.first').nextAll().css('background-color','red');
+    $('.fourth').prevAll().css('background-color','green');
 })

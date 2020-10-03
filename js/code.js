@@ -1,19 +1,10 @@
 $(document).ready(function(){
-    //Insertion arround!
+    
+    //insert before!
+    $('p').before('<h3>Hello World!</h3>'); // or $('<h3>Hello World!</h3>').insertBefore('p')
 
-    //this function move selected elements by an only element-wrap!
-    $('p').wrapAll('<div class="wrapAll"></div>');
+    //insert after!
+    $('p').after('<h2>Good Morning!</h2>'); // or $('<h2>Good Morning!</h2>').insertAfter('p')
 
-    //This function wrap the content of the element selected!
-    $('p').wrapInner('<b></b>')
-
-    $('.wrapAll').css({
-        'width':'300px',
-        'height':'300px',
-        'background-color':'gray',
-        'display': 'flex',
-        'justify-content': 'center',
-        'align-items':'center'
-    })
 
 })

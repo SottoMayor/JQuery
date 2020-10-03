@@ -1,29 +1,27 @@
 $(document).ready(function(){
-   
-    $('.container').click(function(){
-        alert("You've Clicked")
-    })
+   /*
+   $('.box').on('click', function(){
+       console.log('clicked by event on!')
+   })
+   */
 
-    $('.container').hover(function(){
-        $(this).css("background-color",'blue');
-    }, function(){
-        $(this).css("background-color",'white');
-    });
-    
-    /*$('#content').mousedown(function(){
-        console.log('Mouse Down!')
-    })
+   $(document).on('click', '.box', function(){
+       console.log('Clicked by event on!')
+   })
 
-    $('#content').mouseup(function(){
-        console.log('Mouse Up!')
-    })
-    */
+    $('.box').fadeOut();
+    $(window).scroll(function(){
+       var distScroll = $(document).scrollTop();
 
-    $('#content').click(function(){
-        console.log('mousedown and mouseup!')
-    })
+       if(distScroll > 500){
+           $('.box').fadeIn(500)
+       }else{
+            $('.box').fadeOut(500)
+       }
+   })
 
-    $('#content').mousemove(function(){
-        console.log('Mouse Move!!')
-    })
+   $(window).resize(function(){
+       console.log($(this).width() + ' px')
+   })
+
 })

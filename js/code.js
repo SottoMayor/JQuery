@@ -1,21 +1,27 @@
 $(document).ready(function() {
 
-   /*
-   $('button').click(function(){
-        $('.box').hide('slow'); //fast, slow or time
-    })
-    */ 
+    var box = $('.box');
 
     /*
-    $('.box').css('display', 'none');
-    $('button').click(function(){
-    $('.box').show('fast'); //fast, slow or time
-    */
+    box.css('display','none');
+   $('.fadeIn').click(function(){
+       box.fadeIn(1000, function(){
+           console.log('Done!')
+       });
+   })
 
-    // hide and show, and we can set slideToggle also!
-    $('button').click(function(){
-        $('.box').stop().toggle(2500); //fast, slow or time
-    })
+   $('.fadeOut').click(function(){
+       box.fadeOut(1000, function(){
+           console.log('Done Again!')
+       })
+   })
+   */
+
+   $('.fadeToggle').click(function(){
+       box.fadeToggle('slow', function(){
+           console.log('BORA!')
+       })
+   })
 
     
 });

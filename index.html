@@ -8,17 +8,16 @@
 
     <style>
 
-        .box{
-            background-color: burlywood;
-            max-width: 1080px;
-            height: 1000px;
-            box-sizing: 0 2px 2px rgba(0, 0, 0, 0.2);
-            margin: auto;
-            font-size: 50px;
+        .focus, .blur, input[type='submit']{
+            padding: 10px;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 15px;
         }
 
-        #content{
-            min-height: 5000px;
+        span{
+            display: none;
         }
 
     </style>
@@ -34,21 +33,15 @@
 
     <section id="content">
 
-       <div class="container">
+        <form action="">
 
-            <p>This is a paragraph ONE</p>
-            <p>This is a paragraph TWO</p>
+            <input type="text" class="focus" placeholder="FOCUS">
+            <input type="checkbox" class="checkbox">
+            <input type="submit" class="submit" value="Send it!">
+            <span>Not Realoding!!</span>
 
-
-            <div class="div-with-paragraph">
-
-                <p>Another paragraph</p>
-
-            </div>
-       </div>
-
-       <div class="box"></div>
-
+        </form>
+        
     </section>
 
     <script src="js/jquery.js"></script>

@@ -1,27 +1,29 @@
 $(document).ready(function(){
-   /*
-   $('.box').on('click', function(){
-       console.log('clicked by event on!')
-   })
-   */
 
-   $(document).on('click', '.box', function(){
-       console.log('Clicked by event on!')
-   })
+    //FOCUS EFECT!
+    
+    $('.focus').focusin(function(){
+        $(this).css('box-shadow', '0 0 6px gray')
+    })
 
-    $('.box').fadeOut();
-    $(window).scroll(function(){
-       var distScroll = $(document).scrollTop();
+    $('.focus').focusout(function(){
+        $(this).css('box-shadow', '0 0 0px gray')
+    })
 
-       if(distScroll > 500){
-           $('.box').fadeIn(500)
-       }else{
-            $('.box').fadeOut(500)
-       }
-   })
+    $('input:checkbox').change(function(){
+        var isChecked = $(this).is(':checked');
+        if(isChecked){
+            alert('The check is CHECKED!')
+        }else{
+            alert('The check is not CHECKED!')
+        }
+    })
 
-   $(window).resize(function(){
-       console.log($(this).width() + ' px')
-   })
+    $('form').submit(function(event){
+        event.preventDefault(); // or 'return false' in the last line! 
+        console.log('Not realoding!')
+        $('span').css({'display':'block', 'color':'red'}).fadeOut(2000);
+    })
+
 
 })

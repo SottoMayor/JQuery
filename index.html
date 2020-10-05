@@ -8,16 +8,11 @@
 
     <style>
 
-        .focus, .blur, input[type='submit']{
-            padding: 10px;
-            outline: none;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-
-        span{
-            display: none;
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            color: white;
         }
 
     </style>
@@ -33,45 +28,14 @@
 
     <section id="content">
 
-        <table>
+        <div class="box">
+            This is a box!
+        </div>
 
-            <thead>
-                <tr>
-                    <th><input type="checkbox" id="checkMaster">  Order</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Profession</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> <input type="checkbox" class="check"> </td>
-                    <td>David Sotto Mayor M Fernandes</td>
-                    <td>david@domain.com</td>
-                    <td>Web Developer</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" class="check"> </td>
-                    <td>David Sotto Mayor M Fernandes</td>
-                    <td>david@domain.com</td>
-                    <td>Web Developer</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" class="check"> </td>
-                    <td>David Sotto Mayor M Fernandes</td>
-                    <td>david@domain.com</td>
-                    <td>Web Developer</td>
-                </tr>
-                <tr>
-                    <td> <input type="checkbox" class="check"> </td>
-                    <td>David Sotto Mayor M Fernandes</td>
-                    <td>david@domain.com</td>
-                    <td>Web Developer</td>
-                </tr>
-            </tbody>
+        <br>
 
-        </table>
-        
+        <button>Click Me!</button>
+
     </section>
 
     <script src="js/jquery.js"></script>

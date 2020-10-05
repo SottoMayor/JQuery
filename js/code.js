@@ -1,11 +1,22 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-    $('table tr:odd').css('background-color','lightgray');
-    $('table td, table th').css('border','5px solid white');
+   /*
+   $('button').click(function(){
+        $('.box').hide('slow'); //fast, slow or time
+    })
+    */ 
 
-    $('#checkMaster').click(function(){
-        $('.check').prop('checked',$(this).prop('checked'));
-    });
-        
+    /*
+    $('.box').css('display', 'none');
+    $('button').click(function(){
+    $('.box').show('fast'); //fast, slow or time
+    */
 
-})
+    // hide and show, and we can set slideToggle also!
+    $('button').click(function(){
+        $('.box').stop().toggle(2500); //fast, slow or time
+    })
+
+    
+});
+

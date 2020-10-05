@@ -2,23 +2,32 @@ $(document).ready(function() {
 
     var box = $('.box');
 
-
     /*
-    
-     $('.slideUp').click(function(){
-        box.slideUp(1000);
-    })
-
-    $('.slideDown').click(function(){
-        box.slideDown(1000);
-    })
-
+    $(document).click(function(){
+        box.animate({
+            left: '10px',
+            top: "20px",
+            width: '50px',
+            height: '50px'
+        }, 5000, function(){
+            console.log('Animation Done!')
+        })
+    });
     */
 
-    $('.slideToggle').click(function(){
-        box.slideToggle('slow');
-    })
-   
+   $('.box').mousemove(function(){
+    box.animate({
+        left: '10px',
+        top: "20px",
+        width: '50px',
+        height: '50px'
+    }, 5000, function(){
+        console.log('Animation Done!')
+        });
+
+    });
+
+    
 
     
 });

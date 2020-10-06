@@ -8,31 +8,57 @@
 
     <style>
 
-        .box{
-            width: 200px;
-            height: 200px;
-            background-color: orange;
-            color: white;
-            position: relative;
+        .flex{
+            display: flex;
         }
+
+        aside{
+            flex: 30%;
+            background-color: blue;
+            height: 30vh;
+        }
+
+        .container{
+            flex: 70%;
+            background-color: chartreuse;
+            height: 30vh;
+        }
+
+        button{
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 30px;
+            margin: 30px;
+
+        }
+
+        
 
     </style>
 
 </head>
 <body>
-    
-    <header id='header' class="header">
-
-        <h1 class="main-title">My Title!</h1>
-
-    </header>
 
     <section id="content">
 
-        <div class="box">
-            This is a box!
+        <header class="header">
+            My Header Content!
+        </header>
+
+        <div class="flex">
+
+            <aside> My aside</aside>
+
+            <div class="container"> 
+                My content, I gonna change it with AJAX jQuery!
+            </div>
+
         </div>
 
+        <div class="flex">
+            <button>Click Me to change! </button>
+        </div>
 
     </section>
 

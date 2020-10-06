@@ -2,7 +2,6 @@
         margin: 0;
         padding: 0;
     }
-  
   input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
     margin: 8px;
     padding: 6px 12px;

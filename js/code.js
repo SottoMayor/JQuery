@@ -1,7 +1,17 @@
 $(document).ready(function(){
 
     $('button').click(function(){
-        $('.container').load('demo.html');
+
+        $.get('demo.html', function(data, status) {
+
+            if(status === 'success'){
+                $('.container').html(data);
+            }else{
+                alert('Error! Pag Not Found!')
+            }
+
+        })
+
     })
 
 })

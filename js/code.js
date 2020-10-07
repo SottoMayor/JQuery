@@ -1,20 +1,18 @@
 $(document).ready(function(){
 
-    var scroll_top = $('.scroll-top');
-
     $(window).scroll(function(){
 
-        if( $(this).scrollTop() > 250 ){
-            scroll_top.stop().fadeIn(700);
+        var scroll_top_window = $(window).scrollTop();
+
+        if(scroll_top_window > 60){
+            $('.navigation').addClass('sticky').fadeIn(400);
         }else{
-            scroll_top.stop().fadeOut(700);
+            $('.navigation').removeClass('sticky', 700);
         }
 
-    })
+    });
 
-    scroll_top.click(function(){
-        $('html, body').animate({
-            scrollTop: 0
-        }, 750)
-    })
-})  
+
+   
+
+});
